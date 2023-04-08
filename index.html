@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Success Page</title>
 	<meta charset="UTF-8">
-	<title>Success page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>
-		window.onload = function() {
-			var urlParams = new URLSearchParams(window.location.search);
-			var code = urlParams.get('code');
+		// wyciągnięcie kodu z adresu URL po załadowaniu strony
+		window.addEventListener('load', () => {
+			const urlSearchParams = new URLSearchParams(window.location.search);
+			const params = Object.fromEntries(urlSearchParams.entries());
+			const code = params.code;
 			if (code) {
-				document.getElementById("code").innerHTML = code;
+				// wypisanie kodu na stronie
+				document.getElementById('code').innerText = code;
 			}
-		}
+		});
 	</script>
 </head>
 <body>
-	<h1>Payment successful</h1>
+	<h1>Success! tt</h1>
 	<p>Your payment was successful. Your code is:</p>
 	<p id="code"></p>
 </body>
