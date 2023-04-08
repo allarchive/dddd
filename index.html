@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Kod płatności</title>
-  </head>
-  <body>
-    <h1>Kod płatności:</h1>
-    <p>
-      <script>
-        // pobierz kod z adresu URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        // wyświetl kod na stronie
-        document.write(code);
-      </script>
-    </p>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Success page</title>
+	<script>
+		window.onload = function() {
+			var urlParams = new URLSearchParams(window.location.search);
+			var code = urlParams.get('code');
+			if (code) {
+				document.getElementById("code").innerHTML = code;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Payment successful</h1>
+	<p>Your payment was successful. Your code is:</p>
+	<p id="code"></p>
+</body>
 </html>
