@@ -6,23 +6,31 @@
 }
 
 /* Stylowanie nagłówka */
-h1 {
-  font-size: 3rem;
+.page-header {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 /* Stylowanie paragrafu */
-p {
+.page-description {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
 
 /* Stylowanie listy */
-ul {
-  font-size: 1.2rem;
+.link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.link-list li {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Stylowanie formularza */
